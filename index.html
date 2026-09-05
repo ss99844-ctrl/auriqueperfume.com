@@ -1,174 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AURIQUE | Leave Your Aura Behind</title>
+<title>AURIQUE | Leave Your Aura Behind</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background: #080808;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      border-bottom: 1px solid #333;
-    }
+body {
+  background: #080808;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
 
-    .logo {
-      color: #d4af37;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 6px;
-    }
+/* HEADER */
+header {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+  background: #080808;
+  border-bottom: 1px solid #2c2c2c;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+.logo img {
+  max-height: 55px;
+  max-width: 180px;
+  object-fit: contain;
+}
 
-    .hero {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+nav {
+  display: flex;
+  gap: 25px;
+}
 
-    .hero h1 {
-      font-size: 55px;
-      letter-spacing: 5px;
-      max-width: 900px;
-    }
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
 
-    .hero p {
-      color: #bbbbbb;
-      font-size: 18px;
-      margin: 25px 0;
-    }
+/* HERO */
+.hero {
+  min-height: 82vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    .btn {
-      background: #d4af37;
-      color: black;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    url("11%20shopify%20hero.png");
 
-    .collection {
-      padding: 80px 8%;
-      text-align: center;
-    }
+  background-size: cover;
+  background-position: center;
+}
 
-    .collection h2 {
-      color: #d4af37;
-      letter-spacing: 3px;
-      margin-bottom: 40px;
-    }
+.hero-content {
+  max-width: 900px;
+  padding: 30px;
+}
 
-    .products {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+.hero h1 {
+  font-size: 65px;
+  letter-spacing: 7px;
+  margin-bottom: 20px;
+}
 
-    .product {
-      background: #151515;
-      width: 280px;
-      padding: 30px;
-      border: 1px solid #333;
-    }
+.hero p {
+  font-size: 19px;
+  color: #e0e0e0;
+  margin-bottom: 35px;
+}
 
-    .product h3 {
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
+.btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  padding: 16px 30px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #333;
-      color: #888;
-    }
+/* COLLECTION */
+.collection {
+  padding: 90px 7%;
+  text-align: center;
+}
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
+.collection h2 {
+  color: #d4af37;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
 
-      nav {
-        display: none;
-      }
-    }
-  </style>
+.collection-intro {
+  color: #999;
+  margin-bottom: 50px;
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: #121212;
+  width: 340px;
+  padding-bottom: 30px;
+  border: 1px solid #292929;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+}
+
+.product img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.product h3 {
+  color: #d4af37;
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin: 25px 15px 10px;
+}
+
+.product p {
+  color: #aaa;
+  margin: 10px 20px 20px;
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 10%;
+  text-align: center;
+  background: #0d0d0d;
+}
+
+.about h2 {
+  color: #d4af37;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.about p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.8;
+  color: #b5b5b5;
+}
+
+/* SOCIAL */
+.social {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.social h2 {
+  color: #d4af37;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  z-index: 1000;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #292929;
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .product img {
+    height: 400px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">AURIQUE</div>
+<!-- HEADER -->
+<header>
 
-    <nav>
-      <a href="#">HOME</a>
-      <a href="#shop">SHOP</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-    </nav>
-  </header>
+  <a href="#home" class="logo">
+    <img src="aurique%20TM%20logo%20with%20tagline.png" alt="AURIQUE">
+  </a>
 
-  <section class="hero">
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#shop">SHOP</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
     <h1>LEAVE YOUR AURA BEHIND</h1>
 
     <p>Luxury fragrances designed to linger beyond presence.</p>
 
-    <a href="#shop" class="btn">EXPLORE FRAGRANCES</a>
-  </section>
+    <a class="btn"
+       href="https://wa.me/917000248964?text=Hello%20AURIQUE%2C%20I%20want%20to%20know%20more%20about%20your%20fragrances.">
+       SHOP ON WHATSAPP
+    </a>
 
-  <section class="collection" id="shop">
+    <a class="btn" href="#shop">
+      EXPLORE COLLECTION
+    </a>
 
-    <h2>OUR COLLECTION</h2>
+  </div>
 
-    <div class="products">
+</section>
 
-      <div class="product">
-        <h3>FOR HIM</h3>
-        <p>Fresh. Refined. Limitless.</p>
-      </div>
+<!-- PRODUCTS -->
+<section class="collection" id="shop">
 
-      <div class="product">
-        <h3>FOR HER</h3>
-        <p>Elegant. Captivating. Timeless.</p>
-      </div>
+  <h2>OUR COLLECTION</h2>
 
-      <div class="product">
-        <h3>UNISEX</h3>
-        <p>Beyond boundaries.</p>
-      </div>
+  <p class="collection-intro">
+    Discover fragrances crafted to become part of your presence.
+  </p>
+
+  <div class="products">
+
+    <!-- AZURE -->
+    <div class="product">
+
+      <img src="azure%20hero.png" alt="AURIQUE Azure">
+
+      <h3>AURIQUE AZURE</h3>
+
+      <p>Fresh. Refined. Limitless.</p>
+
+      <a class="btn"
+         href="https://wa.me/917000248964?text=Hello%20AURIQUE%2C%20I%20want%20to%20buy%20AURIQUE%20AZURE.">
+         BUY ON WHATSAPP
+      </a>
 
     </div>
 
-  </section>
+    <!-- NOIR -->
+    <div class="product">
 
-  <footer>
-    © 2026 AURIQUE — Leave Your Aura Behind
-  </footer>
+      <img src="noir%20hero%202.png" alt="AURIQUE Noir">
+
+      <h3>AURIQUE NOIR</h3>
+
+      <p>Elegant. Captivating. Timeless.</p>
+
+      <a class="btn"
+         href="https://wa.me/917000248964?text=Hello%20AURIQUE%2C%20I%20want%20to%20buy%20AURIQUE%20NOIR.">
+         BUY ON WHATSAPP
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <h2>THE ART OF PRESENCE</h2>
+
+  <p>
+    AURIQUE is created for those who believe that fragrance is more than a scent.
+    It is a signature, a memory and an invisible part of your presence.
+    Discover luxury fragrances designed to stay with the world long after you leave.
+  </p>
+
+</section>
+
+<!-- INSTAGRAM -->
+<section class="social" id="contact">
+
+  <h2>JOIN THE AURIQUE WORLD</h2>
+
+  <p style="color:#aaa; margin-bottom:25px;">
+    Follow us for new launches and exclusive updates.
+  </p>
+
+  <a class="btn"
+     href="https://www.instagram.com/aurique_official/"
+     target="_blank">
+     FOLLOW US ON INSTAGRAM
+  </a>
+
+</section>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float"
+   href="https://wa.me/917000248964?text=Hello%20AURIQUE%2C%20I%20would%20like%20to%20know%20more."
+   target="_blank"
+   aria-label="Chat with AURIQUE on WhatsApp">
+   ☎
+</a>
+
+<footer>
+  © 2026 AURIQUE — Leave Your Aura Behind
+</footer>
 
 </body>
 </html>
